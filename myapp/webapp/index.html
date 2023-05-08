@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script
+     id="sap-ui-bootstrap" 
+     src="https://sdk.openui5.org/resources/sap-ui-core.js" 
+     data-sap-ui-theme="sap_belize"
+     data-sap-ui-libs="sap.m" 
+     data-sap-ui-compatVersion="edge" 
+     data-sap-ui-async="true" 
+     data-sap-ui-resourceroots='{
+                "opensap.myapp": "./"
+            }'>
+
+            </script>
+    <script>
+        jQuery.sap.require("sap.ui.core.util.MockServer");
+			var oMockServer = new sap.ui.core.util.MockServer({
+				rootUri: "/destinations/ES5/sap/opu/odata/IWBEP/GWSAMPLE_BASIC/"
+			});
+			oMockServer.simulate("metadata.xml", {
+				sMockdataBaseUrl: "mockdata",
+				bGenerateMissingMockData: true
+			});
+			oMockServer.start();
+
+        sap.ui.getCore().attachInit(function () {
+            new sap.ui.core.ComponentContainer({
+                name: "opensap.myapp"
+            }).placeAt("content");
+        });
+
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI5</title>
+</head>
+
+<body class="sapUiBody" id="content">
+</body>
+
+</html>

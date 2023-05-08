@@ -1,0 +1,28 @@
+<mvc:View xmlns:form="sap.ui.layout.form"
+	controllerName="opensap.myapp.controller.Add"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:smartfield="sap.ui.comp.smartfield"
+	xmlns:smartform="sap.ui.comp.smartform"
+	xmlns:semantic="sap.m.semantic"
+	xmlns="sap.m">
+	<semantic:FullscreenPage
+		id="page"
+		title="{i18n>addPageTitle}"
+		showNavButton="true"
+		navButtonPress="onNavBack">
+
+		<!-- <semantic:content>
+				<smartform:SmartForm >
+					<smartform:Group >
+						<smartform:GroupElement >
+							<smartfield:SmartField
+								id="NameField"
+								value="{Name}"
+							/>
+						</smartform:GroupElement>
+					</smartform:Group>
+				</smartform:SmartForm>
+		</semantic:content> -->
+
+	</semantic:FullscreenPage>
+</mvc:View>

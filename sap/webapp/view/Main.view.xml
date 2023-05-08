@@ -1,0 +1,38 @@
+<mvc:View xmlns:table="sap.ui.table" 
+    xmlns:form="sap.ui.layout.form" 
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="myapp.controller.Main">
+  <App>
+    <pages>
+      <Page title="My App">
+        <!-- <content>
+          <form:SimpleForm id="myForm" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="4" labelSpanS="12">
+            <Label text="Name"  class="sapUiSmallMarginEnd"/>
+            <Input valueState="{/state}" id="name"  liveChange=".onInputChange" value="{/name}" placeholder="Enter your name"/>
+            <Label text="Surname" required="true" class="sapUiSmallMarginEnd"/>
+            <Input value="{/surname}" id="surname" placeholder="Enter your surname"/>
+            <Label text="Email" required="true" class="sapUiSmallMarginEnd"/>
+            <Input value="{/email}" id="email" placeholder="Enter your email"/>
+            <Button text="Submit"  press=".onPressSubmit"/>
+          </form:SimpleForm>
+        </content> -->
+      </Page>
+      <Page title="product">
+        <table:Table >
+            <table:columns>
+              <table:Column>
+                <Text text="text 1" />
+              </table:Column>
+              <table:Column>
+                <Text text="text 2" />
+              </table:Column>
+              <table:Column>
+                <Text text="text 3" />
+              </table:Column>
+            </table:columns>
+        </table:Table>
+      </Page>
+    </pages>
+  </App>
+</mvc:View>

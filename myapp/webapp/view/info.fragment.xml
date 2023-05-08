@@ -1,0 +1,24 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+	xmlns:l="sap.ui.layout"
+
+>
+    <Panel 
+    expandable="true"  
+    expand="false"
+    id="productDetails"
+    headerText="Product Details"
+    visible="false"
+    >
+        <l:Grid >
+
+        <Text text="Product ID: {ProductID}"  />
+            <Text text="Product Name: {ProductName}" />
+            <Text text="Description: {QuantityPerUnit}" />
+            <Text text="Product Price: {= ${UnitPrice} + '¢'}" />
+            <Text text="Deliverd from: {= ${Supplier/Country} + ',' + ${Supplier/City}}" />
+        </l:Grid>
+        
+    </Panel>
+</core:FragmentDefinition>
